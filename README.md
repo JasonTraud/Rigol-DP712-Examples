@@ -21,4 +21,4 @@ Command               | Description                                 | Response
 
 ## Scripts
 ### Demo.py - Hardcoded Example
-Example with no adjustable parameters from the terminal. You'll need to manually adjust the COM port for this one to work. In this specific example the USB to RS232 cable on my computer is COM4.
+Example with no adjustable parameters from the terminal. You'll need to manually adjust the COM port for this one to work. In this specific example the USB to RS232 cable on my computer is COM4. Script will print the measured output voltage of the power supply for a specified amount of seconds, turn ON the output, print the output again, then turns the output OFF. This is meant to demonstrate how to set the voltage of the power supply and control the output state.
