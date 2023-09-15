@@ -20,5 +20,11 @@ Command               | Description                                 | Response
 :APPLy CH1,30,2       | Sets the output to 30V and 2A               | No response for the SET command
 
 ## Scripts
-### Demo.py - Hardcoded Example
+### demo.py - Hardcoded Example
 Example with no adjustable parameters from the terminal. You'll need to manually adjust the COM port for this one to work. In this specific example the USB to RS232 cable on my computer is COM4. Script will print the measured output voltage of the power supply for a specified amount of seconds, turn ON the output, print the output again, then turns the output OFF. This is meant to demonstrate how to set the voltage of the power supply and control the output state.
+
+### demoGUI.py - Flexible Example with a GUI
+Expanding on the previous example by allowing you to configure the voltage and current limit with a GUI and buttons to turn the output **ON** and **OFF**.
+<p align="center">
+  <img src="https://github.com/JasonTraud/Rigol-DP712-Examples/blob/main/images/gui.png?raw=true" alt="GUI"/>
+</p>
