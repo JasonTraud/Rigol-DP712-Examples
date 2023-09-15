@@ -35,7 +35,7 @@ def offFunction():
 
 if __name__=="__main__":
     window = Tk()   
-    window.geometry("350x225")
+    window.geometry("350x235")
     window.title("Rigol DP712 Control Panel")
     window.columnconfigure(0, weight=1)
     window.rowconfigure(0, weight=1)
@@ -46,6 +46,7 @@ if __name__=="__main__":
     ttk.Label(mainframe,text="Instrument",font=("Arial",16),width=10,justify=LEFT).grid(row=1,column=1)
     ttk.Label(mainframe,text="Voltage",font=("Arial",16),width=10,justify=LEFT).grid(row=2,column=1)
     ttk.Label(mainframe,text="Current",font=("Arial",16),width=10,justify=LEFT).grid(row=3,column=1)
+    ttk.Label(mainframe,text=" ",font=("Arial",8),width=10,justify=LEFT).grid(row=4,column=1,columnspan=2)
 
     OPTIONS = pyvisa.ResourceManager().list_resources()
     Instrument_Target = StringVar(mainframe)
@@ -64,16 +65,16 @@ if __name__=="__main__":
     f = font.Font(weight="bold",size=18,family="Arial")
     Set_button = Button(mainframe, text="SET", command=setFunction,width=20,bg="blue",fg="white",activebackground="white",activeforeground="blue")
     Set_button['font'] = f
-    Set_button.grid(row=4,column=1,columnspan=2)
+    Set_button.grid(row=5,column=1,columnspan=2)
 
     f = font.Font(weight="bold",size=18,family="Arial")
     Set_button = Button(mainframe, text="ON", command=onFunction,width=8,bg="green",fg="white",activebackground="white",activeforeground="green")
     Set_button['font'] = f
-    Set_button.grid(row=5,column=1, padx=0, pady=0, sticky=NSEW)
+    Set_button.grid(row=6,column=1, padx=0, pady=0, sticky=NSEW)
 
     f = font.Font(weight="bold",size=18,family="Arial")
     Set_button = Button(mainframe, text="OFF", command=offFunction,width=8,bg="red",fg="white",activebackground="white",activeforeground="red")
     Set_button['font'] = f
-    Set_button.grid(row=5,column=2,columnspan=2, padx=0, pady=0, sticky=NSEW)
+    Set_button.grid(row=6,column=2,columnspan=2, padx=0, pady=0, sticky=NSEW)
 
     mainloop()
